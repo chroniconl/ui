@@ -14,7 +14,7 @@ const buttonVariants = cva(
           'bg-red-600 text-white font-bold hover:bg-red-700 focus:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500',
         outline:
           'border ch-border bg-background hover:bg-accent hover:text-accent-foreground',
-        secondary: 'ch-button-seconary',
+        secondary: 'ch-button-secondary',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
       },
@@ -52,4 +52,59 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 Button.displayName = 'Button'
 
-export { Button, buttonVariants }
+const ChButtonPrimary = React.forwardRef<
+  HTMLButtonElement,
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+>(({ className, ...props }, ref) => (
+  <Button
+    ref={ref}
+    className={cn('ch-button', className)}
+    {...props}
+  />
+))
+ChButtonPrimary.displayName = 'ChButtonPrimary'
+
+const ChButtonSecondary = React.forwardRef<
+  HTMLButtonElement,
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+>(({ className, ...props }, ref) => (
+  <Button
+    ref={ref}
+    className={cn('ch-button-secondary', className)}
+    {...props}
+  />
+))
+ChButtonSecondary.displayName = 'ChButtonSecondary'
+
+const ChButtonPrimaryMarketing = React.forwardRef<
+  HTMLButtonElement,
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+>(({ className, ...props }, ref) => (
+  <Button
+    ref={ref}
+    className={cn('ch-button-marketing', className)}
+    {...props}
+  />
+))
+ChButtonPrimaryMarketing.displayName = 'ChButtonPrimaryMarketing'
+
+const ChButtonSecondaryMarketing = React.forwardRef<
+  HTMLButtonElement,
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+>(({ className, ...props }, ref) => (
+  <Button
+    ref={ref}
+    className={cn('ch-button-secondary-marketing', className)}
+    {...props}
+  />
+))
+ChButtonSecondaryMarketing.displayName = 'ChButtonSecondaryMarketing'
+
+export { 
+	Button, 
+	buttonVariants, 
+	ChButtonPrimary, 
+	ChButtonSecondary, 
+	ChButtonPrimaryMarketing, 
+	ChButtonSecondaryMarketing 
+}
