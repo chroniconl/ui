@@ -25,3 +25,13 @@ module.exports = {
   ],
 }
 ```
+
+## Development
+
+To publish a new version of the package, run the following commands:
+
+```sh
+pnpm run build
+node build/bumpAlpha.js
+npm publish --access public
+```
