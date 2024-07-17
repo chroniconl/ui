@@ -33,7 +33,7 @@ const buttonVariants = cva(
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean
-  variant?: 'default' | 'secondary'
+  variant?: 'default' | 'secondary' | 'outline'
   size?: 'default' | 'icon'
 }
 
@@ -56,11 +56,7 @@ const ChButtonPrimary = React.forwardRef<
   HTMLButtonElement,
   React.ButtonHTMLAttributes<HTMLButtonElement>
 >(({ className, ...props }, ref) => (
-  <Button
-    ref={ref}
-    className={cn('ch-button', className)}
-    {...props}
-  />
+  <Button ref={ref} className={cn('ch-button', className)} {...props} />
 ))
 ChButtonPrimary.displayName = 'ChButtonPrimary'
 
@@ -100,11 +96,20 @@ const ChButtonSecondaryMarketing = React.forwardRef<
 ))
 ChButtonSecondaryMarketing.displayName = 'ChButtonSecondaryMarketing'
 
-export { 
-	Button, 
-	buttonVariants, 
-	ChButtonPrimary, 
-	ChButtonSecondary, 
-	ChButtonPrimaryMarketing, 
-	ChButtonSecondaryMarketing 
+const ChButtonPrimaryOutline = React.forwardRef<
+  HTMLButtonElement,
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+>(({ className, ...props }, ref) => (
+  <Button ref={ref} className={cn('ch-button-outline', className)} {...props} />
+))
+ChButtonPrimaryOutline.displayName = 'ChButtonPrimaryOutline'
+
+export {
+  Button,
+  buttonVariants,
+  ChButtonPrimary,
+  ChButtonSecondary,
+  ChButtonPrimaryMarketing,
+  ChButtonSecondaryMarketing,
+  ChButtonPrimaryOutline,
 }
