@@ -1,6 +1,6 @@
 {
   "name": "@chroniconl/ui",
-  "version": "0.0.4-alpha.8",
+  "version": "0.0.5",
   "private": false,
   "scripts": {
     "build": "tsc",
@@ -161,6 +161,11 @@
       "import": "./dist/src/use-toast.js",
       "require": "./dist/src/use-toast.js",
       "types": "./dist/src/use-toast.d.ts"
+    },
+    "./collapsible": {
+      "import": "./dist/src/collapsible.js",
+      "require": "./dist/src/collapsible.js",
+      "types": "./dist/src/collapsible.d.ts"
     }
   },
   "dependencies": {
@@ -168,6 +173,7 @@
     "@radix-ui/react-aspect-ratio": "^1.0.3",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-collapsible": "^1.1.0",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-label": "^2.0.2",
