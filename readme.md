@@ -1,7 +1,5 @@
 # @chroniconl/ui
 
-> The source code for this was never intended for public adoption; it's been moved to https://github.com/chroniconl/cms/tree/main/packages/ui
-
 [![MIT License](https://img.shields.io/badge/license-MIT-yellow.svg)](<[./LICENSE](https://github.com/matthewbub/chroniconl-cms/blob/main/LICENSE)>)
 
 This is pretty much a consolidated directory of https://ui.shadcn.com/ components that we're using in Chroniconl.
